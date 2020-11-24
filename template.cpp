@@ -1,25 +1,6 @@
-#include <algorithm>
-#include <bitset>
-#include <climits>
-#include <cmath>
-#include <cstddef>
-#include <cstdio>
-#include <deque>
-#include <iostream>
-#include <iterator>
-#include <list>
-#include <map>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+#include "bits/stdc++.h"
 using namespace std;
 
-// clang-format off
 #define ll long long
 #define MOD 1000000007
 #define PI 3.14159265
@@ -33,9 +14,10 @@ using namespace std;
 #define EACH(x, a) for (auto &x : a)
 #define DBG(x) cerr << "L" << __LINE__ << ": " << #x << " = " << dbg(x) << endl;
 
-string to_string(bool b) { return b ? "TRUE" : "FALSE"; }
+// clang-format off
+string to_string(bool b) { return b ? "1" : "0"; }
 string to_string(char c) { return string(1, c); }
-string yesno(bool b) { return b ? "YES" : "NO"; }
+string to_string(string s) { return s; }
 template <class T> string dbg(T x) { return to_string(x); }
 template <class K, class V> string dbg(pair<K, V> p) { return "(" + dbg(p.first) + "," + dbg(p.second) + ")"; }
 template <class It> string dbg(It it, It end) {
@@ -44,11 +26,8 @@ template <class It> string dbg(It it, It end) {
     return _dbg_s + "]";
 }
 template <class T> string dbg(vector<T> v) { return dbg(all(v)); }
-template <class K, class V> string dbg(map<K, V> m) { return dbg(all(m)); }
-template <class K, class V> string dbg(unordered_map<K, V> m) { return dbg(all(m)); }
-template <class T> void read(T &x) { cin >> x; }
-template <class A> void read(vector<A> &x) { EACH(a, x) read(a); }
-template <class A> void print(vector<A> a) { EACH(x, a) cout << to_string(x) << " "; }
+template <class T> void read(vector<T> &v) { FOR(v.size()) cin >> v[i]; }
+template <class T> void print(vector<T> v) { EACH(x, v) cout << to_string(x) << " "; }
 // clang-format on
 /******************************************************************************/
 
